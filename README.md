@@ -11,14 +11,10 @@ Dzięki temu modelowi możemy określać ruch ręki robota dla punktów spoza te
 ## Model sieci neuronowej MLP i wsteczna propagacja błędu
 ### MLP
 MLP, czyli Multilayer Perceptron, to model sieci neuronowej która składa się z conajmniej 3 wartw:
-* wejściowej
-* ukrytej (tych może być więcej niż jedna)
-* wyjścowej
+> Warstwa wejściowa: każdy neuron reprezentuje jedna wartość cechy (w naszym przypadku wspołrzędne x i y)
+> Warstwy ukryte: neurony przetwarzają dane wejściowe, ucząc się reprezentacji cech (może być ich więcej niż jedna)
+> Warstwa wyjściowa: generuje wyniki końcowe modelu
 W programie użyte są 2 warstwy ukryte. Warstwy po kolei mają 2, 10, 6, 2 neurony (w uczeniu na starcie dostajemy współrzędne punktu x i y, na wyjściu chcemy uzyskać rownież 2 wartości - nasz nowy punkt dla ręki robota)
-
-> * Warstwa wejściowa: każdy neuron reprezentuje jedna wartość cechy (w naszym przypadku wspołrzędne x i y)
-> * Warstwy ukryte: neurony przetwarzają dane wejściowe, ucząc się reprezentacji cech
-> * Warstwa wyjściowa: generuje wyniki końcowe modelu
 
 ### Połączenia i funkcja aktywacji
 Każde połączenie między neuronami jest opisane wagą, która jest dostosowywana w trakcie treningu sieci. Neurony korzystają
