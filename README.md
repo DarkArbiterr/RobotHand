@@ -19,7 +19,9 @@ W programie użyte są 2 warstwy ukryte. Warstwy po kolei mają **2, 10, 6, 2** 
 ### Połączenia i funkcja aktywacji
 Każde połączenie między neuronami jest opisane **wagą**, która jest dostosowywana w trakcie treningu sieci. Neurony korzystają
 z funkcji aktywacji, która decyduje razem z wagami o wartościach nastepnych warstw. Program wykorzystuje jako funkcję aktywacji **sigmoidę**:
-$$ \sigma(x) = \frac{1}{1 + e^{-x}} $$
+```math 
+\sigma(x) = \frac{1}{1 + e^{-x}}
+```
 
 ### Wsteczna propagacja błędu
 Funkcja *Forward* oblicza kolejno aktywacje i wartości kolejnych warstw aż do wyjściowej. Następnie wykonywana jest wsteczna propagacja błędu - idziemy od końca, od warstwy wyjściowej i wstecz obliczamy błąd. Błąd jest obliczany przez porównanie prognozowanego wyjścia z rzeczywistym. Dla każdego neuronu obliczane są **gradienty funkcji błędu** względem jego wag.
